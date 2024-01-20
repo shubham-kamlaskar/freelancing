@@ -18,3 +18,16 @@ def payment(request):
 
 def products(request):
     return render(request,"products.html")
+
+def form(request):
+    finalans =0
+    try:
+        if request.method == "POST":
+            n1 = int(request.POST.get('username'))
+            n2 = int(request.POST.get('password'))
+            finalans = n1 + n2
+            
+    except Exception as e:
+        finalans = e
+
+    return render(request,"form.html",{'answer':finalans})

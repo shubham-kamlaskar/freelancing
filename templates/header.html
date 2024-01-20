@@ -24,7 +24,7 @@
   }
 
   /* Add a color to the active/current link */
-.topnav a.active {
+.topnav .active a{
     background-color: #04AA6D;
     color: white;
   }
@@ -33,12 +33,13 @@
 </head>
     <body>
 <div class="topnav">
-    <a class="active" href="/">Home</a>
-    <a href="/products">Products</a>
-    <a href="/contact">Contact</a>
-    <a href="/login">Login</a>
-    <a href="/payment">Payment</a>
-    <a href="/find">Talent</a>
+
+    <a class="{% if request.path == '/' %}active{% endif %}" href="/">Home</a>
+    <a class="{% if request.path == '/products/' %}active{% endif %}" href="/products">Products</a>
+    <a class="{% if request.path == '/contact/' %}active{% endif %}" href="/contact">Contact</a>
+    <a class="{% if request.path == '/login/' %}active{% endif %}" href="/login">Login</a>
+    <a class="{% if request.path == '/payment/' %}active{% endif %}" href="/payment">Payment</a>
+    <a class="{% if request.path == '/find/' %}active{% endif %}" href="/find">Talent</a>
   </div>
 
 </body>

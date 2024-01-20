@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+{% extends "base.html" %}
+{% block content %}
+    <head>
+        <title>
+            Form
+        </title>
+        <style>
+            .body
+        {
+            background-color: blue ;
+            
+        }
+    </style>
+    </head>
+
+    <body>
+        <h3> User Form </h3>
+        <form method="POST">
+            {% csrf_token %}
+            <p> Username : <input type="text" name="username" placeholder="Username"> </p>
+            <p> Password : <input type="text" name="password" placeholder="Password"> </p>
+            <p> <button name="submit"> Submit </button> </p>
+        </form>
+        {{answer}}
+    </body>
+    {% endblock %}
+    </html>

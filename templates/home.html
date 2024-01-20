@@ -1,5 +1,8 @@
+
 <!DOCTYPE html>
 <html>
+{% extends "base.html" %}
+{% block content %}
     <head>
         <title>
             Home
@@ -12,7 +15,7 @@
         }
     </style>
     </head>
-{% include "header.html" %}
+
     <body>
         <h3> Welcome to Amphibius Tech </h3>
 
@@ -37,4 +40,5 @@ Are you a freelancer ready to showcase your skills, or a business seeking expert
 <i> Empower Your Projects. Elevate Your Skills. </i>
 
     </body>
+    {% endblock %}
     </html>

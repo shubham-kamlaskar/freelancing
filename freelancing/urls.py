@@ -26,4 +26,5 @@ urlpatterns = [
     path("login/", views.login),
     path("payment/", views.payment),
     path("products/", views.products),
+    path("form/", views.form),
 ]
